@@ -1,21 +1,21 @@
 package ru.yandex.market.unauthorized.install;
 
-import io.appium.java_client.android.AndroidDriver;
+import core.UiObject;
+import core.UiSelector;
+import core.managers.DriverManager;
 import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
-import java.net.URL;
+
+import static api.android.Android.driver;
+
 
 public class PassingTutorial {
 
     @Test
     public void tutorial() throws IOException {
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "BH900GDV4C");
-        caps.setCapability("platformName", "Android-xiaomi");
-        caps.setCapability("app", "C:\\Users\\mavlyashov\\Downloads\\yandexmarket-android_2_73.apk");
-        AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+        DriverManager.createDriver();
+        DriverManager.installerApp();
 
         try {
             Thread.sleep(5000);
@@ -23,10 +23,15 @@ public class PassingTutorial {
             e.printStackTrace();
         }
 
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Далее\")").click();
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Далее\")").click();
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Далее\")").click();
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Всё ясно\")").click();
+        UiObject tapNextTutorial1 = new UiSelector().text("Далее").makeUiObject();
+        UiObject tapNextTutorial2 = new UiSelector().text("Далее").makeUiObject();
+        UiObject tapNextTutorial3 = new UiSelector().text("Далее").makeUiObject();
+        UiObject tapNextTutorial4 = new UiSelector().text("Все ясно").makeUiObject();
+
+        tapNextTutorial1.tap();
+        tapNextTutorial2.tap();
+        tapNextTutorial3.tap();
+        tapNextTutorial4.tap();
         driver.quit();
     }
 }

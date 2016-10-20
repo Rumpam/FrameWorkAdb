@@ -1,5 +1,6 @@
 package ru.yandex.market.unauthorized.searche.redirect;
 
+import core.managers.DriverManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.junit.Test;
@@ -9,6 +10,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.net.URL;
+
+import static api.android.Android.driver;
 
 public class ModelRedirect {
     @Test

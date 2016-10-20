@@ -1,5 +1,6 @@
 package ru.yandex.market.unauthorized.searche.suggest;
 
+import core.managers.DriverManager;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -9,14 +10,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.IOException;
 import java.net.URL;
 
+import static api.android.Android.driver;
+
 public class ModelSuggest {
 
     @Test
     public void sugestToModel() throws IOException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "BH900GDV4C");
+        caps.setCapability("deviceName", "76ef68f47cf3");
         caps.setCapability("platformName", "Android-xiaomi");
-        caps.setCapability("app", "C:\\Users\\mavlyashov\\Downloads\\yandexmarket-android_2_73.apk");
+        caps.setCapability("app", "/Users/w/Downloads/yandexmarket-android_1153.apk");
         AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
         Thread.sleep(5000);
 
