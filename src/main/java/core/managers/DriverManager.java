@@ -23,14 +23,14 @@ public class DriverManager {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", deviceID);
         caps.setCapability("platformName", "Xiaomi3pro");
-        caps.setCapability("app", "/Users/w/Downloads/yandexmarket-android_1153.apk");
+        caps.setCapability("app", "/Users/w/Downloads/yandexmarket-android_1247.apk");
         return caps;
     }
 
     private static URL host(String deviceID) throws IOException {
         if(hosts == null){
             hosts = new HashMap<String, URL>();
-            hosts.put("76ef68f47cf3", new URL("http://0.0.0.0:4723/wd/hub"));
+            hosts.put("08e8f94f011c4404", new URL("http://0.0.0.0:4723/wd/hub"));
         }return hosts.get(deviceID);
     }
 
