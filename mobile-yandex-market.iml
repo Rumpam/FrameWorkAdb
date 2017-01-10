@@ -12,7 +12,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="io.appium.java_client" level="project" />
     <orderEntry type="library" name="io.appium:java-client:4.1.21" level="application" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.allure:allure-junit-adaptor:1.4.22" level="project" />
     <orderEntry type="library" name="Maven: ru.yandex.qatools.allure:allure-java-aspects:1.4.22" level="project" />
@@ -81,5 +80,8 @@
     <orderEntry type="library" name="Maven: org.eclipse.jdt.core.compiler:ecj:4.4.2" level="project" />
     <orderEntry type="library" name="Maven: org.caffinitas.ohc:ohc-core:0.4.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.ben-manes.caffeine:caffeine:2.2.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-api:2.53.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
+    <orderEntry type="library" name="io.appium:java-client:4.1.2" level="project" />
   </component>
 </module>

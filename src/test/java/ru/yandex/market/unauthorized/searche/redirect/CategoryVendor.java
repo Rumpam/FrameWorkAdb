@@ -20,7 +20,7 @@ public class CategoryVendor {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", "76ef68f47cf3");
         caps.setCapability("platformName", "Android-xiaomi");
-        caps.setCapability("app", "/Users/w/Downloads/yandexmarket-android_1153.apk");
+        caps.setCapability("app", "/Users/w/Downloads/yandexmarket-android_1247.apk");
         AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
         Thread.sleep(5000);
 
@@ -35,5 +35,4 @@ public class CategoryVendor {
         driver.findElement(By.id("ru.yandex.market:id/show_vendors_btn")).isSelected();
         driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Samsung\")").isDisplayed();
     }
-
 }
