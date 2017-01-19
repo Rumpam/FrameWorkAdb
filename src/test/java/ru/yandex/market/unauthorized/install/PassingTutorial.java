@@ -1,13 +1,21 @@
 package ru.yandex.market.unauthorized.install;
 
+import api.android.Android;
+import core.ADB;
 import core.UiObject;
 import core.UiSelector;
 import core.managers.DriverManager;
+import io.appium.java_client.android.AndroidDriver;
 import org.junit.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import static api.android.Android.driver;
+import static core.managers.DriverManager.installerApp;
 
 
 public class PassingTutorial {
