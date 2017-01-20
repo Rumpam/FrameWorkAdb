@@ -16,14 +16,14 @@ public class DriverManager {
     private static String deviceID;
     private static DriverService service;
     private static HashMap<String, URL> hosts;
-    private static String unlockPackage = "io.appium.unlock";
+    private static String unlockPackage = "/Users/mavlyashov/Downloads/yandexmarket-android_1269.apk";
 
 
     private static DesiredCapabilities getCaps(String deviceID){
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", deviceID);
         caps.setCapability("platformName", "Xiaomi3pro");
-        caps.setCapability("app", "/Users/mavlyashov/Downloads/yandexmarket-android_1247.apk");
+        caps.setCapability("app", "/Users/mavlyashov/Downloads/yandexmarket-android_1269.apk");
         return caps;
     }
 
@@ -51,6 +51,7 @@ public class DriverManager {
         ArrayList connectedDevices = ADB.getConnectedDevices();
         for (Object connectedDevice : connectedDevices) {
             String device = connectedDevice.toString();
+            availableDevices.add(device);
         }
         return availableDevices;
     }

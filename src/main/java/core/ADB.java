@@ -10,11 +10,11 @@ public class ADB {
 
 
     public void installApp(String apkPath){
-        command("adb -s "+ID+" install "+apkPath);
+        command("adb -s "+ID+" install -r " + apkPath);
     }
 
     public static String command(String command){
-        if(command.startsWith("adb")) command = command.replace("adb ", ServerManager.getAndroidHome()+"/platform-tools/adb ");
+        if(command.startsWith("adb")) command = command.replace("adb", ServerManager.getAndroidHome()+"/platform-tools/adb");
         else throw new RuntimeException("This method is designed to run ADB commands only!");
         String output = ServerManager.runCommand(command);
         return output.trim();

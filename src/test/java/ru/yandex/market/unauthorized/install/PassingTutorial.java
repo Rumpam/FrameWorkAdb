@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static api.android.Android.driver;
-import static core.managers.DriverManager.installerApp;
+import static core.managers.DriverManager.  installerApp;
 
 
 public class PassingTutorial {
@@ -26,7 +26,7 @@ public class PassingTutorial {
         DriverManager.installerApp();
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
