@@ -1,15 +1,18 @@
 package ru.yandex.market.unauthorized.searche.redirect;
 
+import core.UiObject;
+import core.UiSelector;
 import core.managers.DriverManager;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 
 import static api.android.Android.driver;
 
@@ -17,23 +20,19 @@ public class ModelModificationRedirect {
 
     @Test
     public void redirectToModel() throws IOException, InterruptedException {
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "76ef68f47cf3");
-        caps.setCapability("platformName", "Redmi3");
-        caps.setCapability("app", "C:\\Users\\mavlyashov\\Downloads\\yandexmarket-android_1131.apk");
-        AndroidDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
-
-        Thread.sleep(5000);
+        DriverManager.createDriver();
+        DriverManager.installerApp();
 
         driver.findElement(By.id("ru.yandex.market:id/btn_close")).click();
 
-        WebElement element = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Найдётся всё\")");
+        WebElement element = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Поиск на Маркете\")");
         element.click();
-        element.sendKeys("Apple macbook pro 13 with retina display");
+        element.sendKeys("Apple macbook pro 13 mid 2012");
         driver.pressKeyCode(AndroidKeyCode.KEYCODE_SEARCH);
         Thread.sleep(3000);
 
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"ПОПУЛЯРНЫЕ МОДИФИКАЦИИ\")").isDisplayed();
+        //для начала нужно проскролить до элемента scrollTo()
+        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Список модификаций\")").isDisplayed();
         driver.quit();
     }
 }

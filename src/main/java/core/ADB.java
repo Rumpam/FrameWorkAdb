@@ -10,7 +10,7 @@ public class ADB {
 
 
     public void installApp(String apkPath){
-        command("adb -s "+ID+" install -r " + apkPath);
+        command("adb -s "+ID+" install " + apkPath);
     }
 
     public static String command(String command){

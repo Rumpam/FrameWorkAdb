@@ -25,16 +25,10 @@ public class PassingTutorial {
         DriverManager.createDriver();
         DriverManager.installerApp();
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         UiObject tapNextTutorial1 = new UiSelector().text("Далее").makeUiObject();
         UiObject tapNextTutorial2 = new UiSelector().text("Далее").makeUiObject();
         UiObject tapNextTutorial3 = new UiSelector().text("Далее").makeUiObject();
-        UiObject tapNextTutorial4 = new UiSelector().text("Все ясно").makeUiObject();
+        UiObject tapNextTutorial4 = new UiSelector().text("Всё ясно").makeUiObject();
 
         tapNextTutorial1.tap();
         tapNextTutorial2.tap();

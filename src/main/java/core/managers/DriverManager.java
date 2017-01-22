@@ -23,7 +23,7 @@ public class DriverManager {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", deviceID);
         caps.setCapability("platformName", "Xiaomi3pro");
-        caps.setCapability("app", "/Users/mavlyashov/Downloads/yandexmarket-android_1269.apk");
+        caps.setCapability("app", unlockPackage);
         return caps;
     }
 
