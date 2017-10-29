@@ -16,7 +16,7 @@ public class DriverManager {
     private static String deviceID;
     private static DriverService service;
     private static HashMap<String, URL> hosts;
-    private static String unlockPackage = "/Users/mavlyashov/Downloads/yandexmarket-android_1269.apk";
+    private static String unlockPackage = "/Users/ruslan.mavlyashov/Downloads/Lamoda_304020_universal-debug.apk";
 
 
     private static DesiredCapabilities getCaps(String deviceID){
